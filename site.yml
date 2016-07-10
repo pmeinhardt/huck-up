@@ -8,6 +8,10 @@
     - essentials
     - dotfiles
     - zsh
+    - python
+    - go
+    - ruby
+    - node
     - home
     - shairport
     - hifiberry

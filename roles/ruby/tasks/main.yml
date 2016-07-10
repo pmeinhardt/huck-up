@@ -1,0 +1,9 @@
+---
+- name: install rbenv
+  git: repo=https://github.com/rbenv/rbenv.git dest={{ home }}/.rbenv
+
+- name: install ruby-build
+  git: repo=https://github.com/rbenv/ruby-build.git dest={{ home }}/.rbenv/plugins/ruby-build
+
+- name: install rbenv-update
+  git: repo=https://github.com/rkh/rbenv-update.git dest={{ home }}/.rbenv/plugins/rbenv-update

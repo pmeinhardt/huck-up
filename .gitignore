@@ -1,3 +1,6 @@
+# Retry files
+*.retry
+
 # Certificates and private keys
 *.key
 *.crt

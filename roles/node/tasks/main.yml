@@ -1,0 +1,23 @@
+---
+- name: install https transport for apt
+  apt: pkg=apt-transport-https state=present
+  become: yes
+  tags: node
+
+- name: add nodesource key
+  apt_key: url=https://deb.nodesource.com/gpgkey/nodesource.gpg.key state=present
+  become: yes
+  tags: node
+
+- name: add nodesource repos
+  apt_repository: repo={{ item }} state=present filename="nodesource" mode=0644
+  with_items:
+    - "deb https://deb.nodesource.com/node_6.x jessie main"
+    - "deb-src https://deb.nodesource.com/node_6.x jessie main"
+  become: yes
+  tags: node
+
+- name: install node
+  apt: pkg=nodejs state=present
+  become: yes
+  tags: node

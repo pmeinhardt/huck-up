@@ -1,0 +1,5 @@
+---
+- name: install go
+  apt: pkg=golang state=present
+  become: yes
+  tags: go

@@ -1,0 +1,9 @@
+---
+- name: install setuptools
+  apt: pkg=python-setuptools state=present
+  become: yes
+  tags: python
+
+- name: install pip
+  easy_install: name=pip state=latest
+  tags: python
