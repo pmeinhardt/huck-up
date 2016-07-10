@@ -1,0 +1,25 @@
+---
+- name: ensure shairport dependencies are installed
+  apt: pkg={{ item }} state=present
+  with_items:
+    - avahi-utils
+    - libao-dev
+    - libasound2-dev
+    - libavahi-client-dev
+    - libcrypt-openssl-rsa-perl
+    - libio-socket-inet6-perl
+    - libmodule-build-perl
+    - libpulse-dev
+    - libssl-dev
+    - libwww-perl
+    - pulseaudio
+  become: yes
+  tags: shairport
+
+- name: fetch shairport repo
+  git: repo=https://github.com/abrasive/shairport.git dest={{ home }}/.build/shairport
+  notify:
+    - configure shairport
+    - build shairport
+    - install shairport
+  tags: shairport

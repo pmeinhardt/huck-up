@@ -1,0 +1,10 @@
+---
+- name: configure shairport
+  command: ./configure chdir={{ home }}/.build/shairport
+
+- name: build shairport
+  make: chdir={{ home }}/.build/shairport
+
+- name: install shairport
+  make: target=install chdir={{ home }}/.build/shairport
+  become: yes

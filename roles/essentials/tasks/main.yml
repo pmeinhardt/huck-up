@@ -1,21 +1,21 @@
 ---
-# This role contains common plays.
-
 - name: update apt cache
   apt: update_cache=yes
+  become: yes
 
 - name: upgrade safe packages
   apt: upgrade=safe
+  become: yes
 
-# Basic tools
-
-- name: ensure basic tools are installed
+- name: ensure essential tools are installed
   apt: pkg={{ item }} state=present
   with_items:
+    - build-essential
+    - curl
     - git
     - htop
     - iftop
     - iotop
     - sudo
     - vim
-  tags: tools
+  become: yes

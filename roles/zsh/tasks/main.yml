@@ -1,0 +1,7 @@
+---
+- name: ensure zsh is installed
+  apt: pkg=zsh state=present
+  become: yes
+
+- name: set zsh as the default shell
+  user: name=pi shell=/bin/zsh

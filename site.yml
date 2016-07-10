@@ -3,9 +3,13 @@
 # to the roles (services) that you want the group's host(s) to run.
 
 - hosts: raspberrypi
-  become: yes
   roles:
-    - ssh
-    - common
+    - ssh-keys
+    - essentials
+    - dotfiles
+    - zsh
+    - home
+    - shairport
     # - hifiberry
-    # - shairport
+  vars:
+    home: "{{ ansible_env.HOME }}"

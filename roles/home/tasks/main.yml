@@ -1,0 +1,11 @@
+---
+- name: create directories in home
+  file: path={{ home }}/{{ item }} state=directory
+  with_items:
+    - code
+    - documents
+    - downloads
+    - movies
+    - music
+    - pictures
+    - public
