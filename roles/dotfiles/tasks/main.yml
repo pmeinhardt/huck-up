@@ -5,8 +5,5 @@
 
 - name: write git configuration
   template: src=gitconfig.local.j2 dest={{ home }}/.dotfiles/git/gitconfig.local.symlink
-  tags: dotfiles
-
-- name: symlink dotfiles
-  shell: ./script/link chdir={{ home }}/.dotfiles
+  notify: symlink dotfiles
   tags: dotfiles

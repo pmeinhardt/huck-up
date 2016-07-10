@@ -1,5 +1,5 @@
 ---
-- name: ensure zsh is installed
+- name: install zsh
   apt: pkg=zsh state=present
   become: yes
 

@@ -7,7 +7,7 @@
   apt: upgrade=safe
   become: yes
 
-- name: ensure essential tools are installed
+- name: install essential tools
   apt: pkg={{ item }} state=present
   with_items:
     - build-essential

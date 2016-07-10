@@ -1,5 +1,5 @@
 ---
-- name: ensure shairport dependencies are installed
+- name: install shairport dependencies
   apt: pkg={{ item }} state=present
   with_items:
     - avahi-utils
