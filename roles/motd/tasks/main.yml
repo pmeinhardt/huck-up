@@ -1,0 +1,26 @@
+---
+- name: update static motd file
+  copy: src=motd.static dest=/etc/motd backup=yes
+  become: yes
+  tags: motd
+
+- name: install dynamic motd script
+  copy: src=motd.sh dest=/etc/motd.sh
+  become: yes
+  tags: motd
+
+- name: setup dynamic motd script for bourne-compatible shells
+  file: src=/etc/motd.sh dest=/etc/profile.d/motd.sh state=link
+  become: yes
+  tags: motd
+
+- name: setup dynamic motd script for zsh
+  blockinfile:
+    dest: /etc/zsh/zprofile
+    block: |
+      if [ -r /etc/motd.sh ]
+      then
+        source /etc/motd.sh
+      fi
+  become: yes
+  tags: motd
