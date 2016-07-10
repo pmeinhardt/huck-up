@@ -35,6 +35,9 @@
 # In order to have Ansible ask for the connection password,
 # add the -k/--ask-pass option to the ansible-playbook call.
 #
+# Once you have deployed your public SSH key to the Pi,
+# you can just leave out the password.
+#
 # For an introduction to Ansible inventory files, read:
 # http://docs.ansible.com/ansible/intro_inventory.html
 
