@@ -32,38 +32,43 @@ needs.**
 
 We recommend you keep these versioned in your own fork of this repository.
 
-Right away, you'll want to edit `site.yml` to your liking and select the roles
-you need. If you'd like to change the default configuration, copy
-`vars/default.yml` to `vars/config.yml` and hack away.  You may want to encrypt
-this file using Ansible Vault if you plan on keeping it in your repository – a
-brief description is presented in a separate section below.
+Right away, you'll want to edit `site.yml` to your liking
+and select the roles you need.
 
-If you have made changes to your Pi already (in particular its hostname,
-username or password) update the `raspberrypi` inventory file, create a
-private copy or specify `-u USERNAME` and `-k` (asks for password)
-on the commandline.
+Create a file named `vars/private.yml` and hack away. Values in `private.yml`
+take precedence over anything defined in `default.yml`. If you're fine with
+the defaults, just `touch vars/private.yml` and you're done.
+
+You may want to encrypt this file using Ansible Vault if you plan on keeping it
+in your repository – a brief description is presented in a separate section
+below.
+
+If you have made changes to your Pi already (in particular its hostname or
+username) update the `raspberrypi` inventory file, create a private copy or
+specify `-u USERNAME` and `-k` (asks for password) on the commandline.
 
 **Be sure not to commit passwords into public repos!**
 
-You can verify your Pi is reachable by running `ssh pi@raspberrypi`.
+You can verify your Pi is reachable by running
+`ansible -i raspberrypi -a "/bin/hostname" raspberrypi`.
 
 **To bootstrap your Pi, run:**
 
 ```shell
-ansible-playbook -i raspberrypi site.yml -e "@vars/config.yml"
+ansible-playbook -i raspberrypi site.yml
 ```
 
 or, if running [locally](http://docs.ansible.com/ansible/playbooks_delegation.html#local-playbooks) on your Pi:
 
 ```shell
 # change the "hosts:" entry in site.yml to "hosts: 127.0.0.1", then run:
-ansible-playbook site.yml -e "@vars/config.yml" --connection=local
+ansible-playbook site.yml --connection=local
 ```
 
 This will get everything set up and you're good to go.
 
 You might have to reboot your Pi for some changes to take effect,
-e.g. the HiFiBerry setup.
+e.g. the HiFiBerry device tree setup.
 
 ## Encrypting configuration files
 
