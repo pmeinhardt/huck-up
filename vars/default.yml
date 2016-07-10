@@ -1,4 +1,7 @@
 ---
+# Configure your git username and email. Not necessary if all you're doing is
+# cloning remote repositories. However, worth editing if you plan on pushing
+# any code from your Pi.
 git:
   username: pi
   useremail: pi@raspberrypi
