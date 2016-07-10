@@ -34,16 +34,16 @@ needs.**
 
 We recommend you keep these versioned in your own fork of this repository.
 
-Right away, you'll want to edit `site.yml` to your liking
-and select the roles you need.
+- Right away, you'll want to edit `site.yml` to your liking
+  and select the roles you need.
 
-Create a file named `vars/private.yml` and hack away. Values in `private.yml`
-take precedence over anything defined in `default.yml`. If you're fine with
-the defaults, just `touch vars/private.yml` and you're done.
+- Create a file named `vars/private.yml` and hack away. Values in `private.yml`
+  take precedence over anything defined in `default.yml`. If you're fine with
+  the defaults, just `touch vars/private.yml` and you're done.
 
-You may want to encrypt this file using Ansible Vault if you plan on keeping it
-in your repository. A brief description is presented in a separate section
-below.
+- You may want to encrypt your `private.yml` using Ansible Vault if you plan on
+  keeping it in your repository. A brief description is presented in a separate
+  section below.
 
 **Be sure not to commit passwords into public repos!**
 
