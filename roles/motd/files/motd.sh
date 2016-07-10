@@ -7,7 +7,7 @@ let mm=$(($total/60%60))
 let hh=$(($total/3600%24))
 let dd=$(($total/86400))
 
-uptime=$(printf "%d days, %02dh%02dm%02ds" "$dd" "$hh" "$mm" "$ss")
+uptime=$(printf "%d days, %02dh %02dm %02ds" "$dd" "$hh" "$mm" "$ss")
 
 # get the load averages
 read one five fifteen rest < /proc/loadavg
