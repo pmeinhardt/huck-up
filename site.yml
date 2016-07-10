@@ -14,6 +14,7 @@
     - node
     - home
     - shairport
+    - media-tools
     - hifiberry
   vars:
     home: "{{ ansible_env.HOME }}"
