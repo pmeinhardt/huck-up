@@ -2,6 +2,8 @@
 - name: install zsh
   apt: pkg=zsh state=present
   become: yes
+  tags: zsh
 
 - name: set zsh as the default shell
-  user: name=pi shell=/bin/zsh
+  user: name={{ user }} shell=/bin/zsh
+  tags: zsh

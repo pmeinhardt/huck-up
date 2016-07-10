@@ -1,4 +1,4 @@
 ---
 - name: install ssh key
-  authorized_key: user=pi key="{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+  authorized_key: user={{ user }} key="{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
   tags: ssh-key
