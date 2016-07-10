@@ -4,7 +4,7 @@ My personal Raspberry Pi home server management.
 
 Built using [Ansible](https://github.com/ansible/ansible).
 
-## Getting started
+## Preparations
 
 There are a few things which you'll need to prepare. Here we go:
 
@@ -26,6 +26,8 @@ There are a few things which you'll need to prepare. Here we go:
 
 4. **Clone this repo…**
    `git clone https://github.com/pmeinhardt/huck-up.git && cd huck-up`
+
+## Provisioning
 
 **Now it is time you adapt the service and deployment configuration to your
 needs.**
@@ -69,6 +71,9 @@ This will get everything set up and you're good to go.
 
 You might have to reboot your Pi for some changes to take effect,
 e.g. the HiFiBerry device tree setup.
+
+You can run these commands from time to time in order to keep your Pi
+up-to-date.
 
 ## Encrypting configuration files
 
