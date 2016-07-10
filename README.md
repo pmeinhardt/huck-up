@@ -62,6 +62,9 @@ ansible-playbook site.yml -e "@vars/config.yml" --connection=local
 
 This will get everything set up and you're good to go.
 
+You might have to reboot your Pi for some changes to take effect,
+e.g. the HiFiBerry setup.
+
 ## Encrypting configuration files
 
 If you keep application secrets in your configuration files, you can use

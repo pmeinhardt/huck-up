@@ -10,6 +10,6 @@
     - zsh
     - home
     - shairport
-    # - hifiberry
+    - hifiberry
   vars:
     home: "{{ ansible_env.HOME }}"

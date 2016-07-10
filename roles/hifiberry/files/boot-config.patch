@@ -1,0 +1,11 @@
+54a55,60
+> # Enable mmap support in the bcm2708-i2s driver
+> dtoverlay=i2s-mmap
+> 
+> # Enable HiFiBerry module
+> dtoverlay=hifiberry-dacplus
+> 
+56c62
+< dtparam=audio=on
+---
+> #dtparam=audio=on

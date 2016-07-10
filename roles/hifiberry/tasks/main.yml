@@ -1,0 +1,5 @@
+---
+- name: update boot config
+  patch: src=boot-config.patch dest=/boot/config.txt backup=yes
+  become: yes
+  tags: hifiberry
