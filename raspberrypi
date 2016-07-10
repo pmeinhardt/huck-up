@@ -42,4 +42,4 @@
 # http://docs.ansible.com/ansible/intro_inventory.html
 
 [raspberrypi]
-raspberrypi ansible_user=pi ansible_ssh_pass=raspberry
+raspberrypi ansible_user=pi # ansible_ssh_pass=raspberry

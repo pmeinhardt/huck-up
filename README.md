@@ -42,14 +42,14 @@ take precedence over anything defined in `default.yml`. If you're fine with
 the defaults, just `touch vars/private.yml` and you're done.
 
 You may want to encrypt this file using Ansible Vault if you plan on keeping it
-in your repository – a brief description is presented in a separate section
+in your repository. A brief description is presented in a separate section
 below.
 
-If you have made changes to your Pi already (in particular its hostname or
-username) update the `raspberrypi` inventory file, create a private copy or
-specify `-u USERNAME` and `-k` (asks for password) on the commandline.
-
 **Be sure not to commit passwords into public repos!**
+
+If you have made changes to your Pi already - in particular if it is available
+under a different hostname - update the `raspberrypi` inventory file or create
+a private copy that you pass to Ansible via the `-i/--inventory-file` option.
 
 You can verify your Pi is reachable by running
 `ansible -i raspberrypi -a "/bin/hostname" raspberrypi`.
@@ -57,7 +57,8 @@ You can verify your Pi is reachable by running
 **To bootstrap your Pi, run:**
 
 ```shell
-ansible-playbook -i raspberrypi site.yml
+./script/bootstrap # if you have not changed the default username or password
+ansible-playbook -i raspberrypi -u USERNAME -k site.yml # otherwise
 ```
 
 or, if running [locally](http://docs.ansible.com/ansible/playbooks_delegation.html#local-playbooks) on your Pi:
@@ -72,8 +73,10 @@ This will get everything set up and you're good to go.
 You might have to reboot your Pi for some changes to take effect,
 e.g. the HiFiBerry device tree setup.
 
-You can run these commands from time to time in order to keep your Pi
-up-to-date.
+**You can rerun these commands from time to time
+in order to keep your Pi up-to-date.**
+
+A handy script to do that for you is available. Just run `./script/update`.
 
 ## Encrypting configuration files
 

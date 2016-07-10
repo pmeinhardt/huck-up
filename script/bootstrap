@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+cd "$(dirname "$0")/.."
+exec ansible-playbook \
+  -i raspberrypi \
+  -e "ansible_ssh_pass=raspberry" \
+  site.yml
