@@ -1,8 +1,10 @@
 # Huckleberry - Welcome home
 
-My personal Raspberry Pi home server management.
+My personal Raspberry Pi (home server) management.
 
 Built using [Ansible](https://github.com/ansible/ansible).
+
+![Say hello to your provisioned Pi](screenshot.png)
 
 ## Preparations
 
