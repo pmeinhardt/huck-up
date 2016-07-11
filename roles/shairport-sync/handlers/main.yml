@@ -1,0 +1,14 @@
+---
+- name: autoreconf shairport-sync
+  command: autoreconf -i -f chdir={{ home }}/.build/shairport-sync
+
+- name: configure shairport-sync
+  command: ./configure --with-configfiles --with-avahi --with-alsa --with-ao --with-ssl=openssl chdir={{ home }}/.build/shairport-sync
+  # command: ./configure --with-configfiles --with-avahi --with-alsa --with-ao --with-ssl=openssl --with-pulseaudio chdir={{ home }}/.build/shairport-sync
+
+- name: build shairport-sync
+  make: chdir={{ home }}/.build/shairport-sync
+
+- name: install shairport-sync
+  make: target=install chdir={{ home }}/.build/shairport-sync
+  become: yes

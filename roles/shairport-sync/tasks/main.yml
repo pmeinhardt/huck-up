@@ -1,0 +1,33 @@
+---
+- name: install shairport-sync dependencies
+  apt: pkg={{ item }} state=present
+  with_items:
+    - autoconf
+    - automake
+    - avahi-utils
+    - avahi-daemon
+    - libao-dev
+    - libasound2-dev
+    - libavahi-client-dev
+    - libconfig-dev
+    - libcrypt-openssl-rsa-perl
+    - libdaemon-dev
+    - libio-socket-inet6-perl
+    - libmodule-build-perl
+    - libpopt-dev
+    - libpulse-dev
+    - libssl-dev
+    - libtool
+    - libwww-perl
+    - pulseaudio
+  become: yes
+  tags: shairport-sync
+
+- name: fetch shairport-sync repo
+  git: repo=https://github.com/mikebrady/shairport-sync.git dest={{ home }}/.build/shairport-sync
+  notify:
+    - autoreconf shairport-sync
+    - configure shairport-sync
+    - build shairport-sync
+    - install shairport-sync
+  tags: shairport-sync

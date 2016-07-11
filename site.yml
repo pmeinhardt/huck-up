@@ -15,6 +15,7 @@
     - node
     - home
     - shairport
+    - shairport-sync
     - media-tools
     - hifiberry
   vars:
