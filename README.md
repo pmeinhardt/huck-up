@@ -4,7 +4,7 @@ My personal Raspberry Pi (home server) management.
 
 Built using [Ansible](https://github.com/ansible/ansible).
 
-![Say hello to your provisioned Pi](screenshot.png)
+<img title="Say hello to your provisioned Pi" width="490px" src="screenshot.png">
 
 ## Preparations
 
