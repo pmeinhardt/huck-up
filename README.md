@@ -6,6 +6,26 @@ Built using [Ansible](https://github.com/ansible/ansible).
 
 <img title="Say hello to your provisioned Pi" width="490px" src="screenshot.png">
 
+## Components
+
+- **ssh-keys** to copy your public SSH key so you can connect securely without
+  typing your password
+- **essentials** installs a few useful server monitoring and common build tools
+- **dotfiles** sets up the server dotfiles, including git configuration
+- **motd** installs the nice "message of the day" greeting you can see above
+- **zsh** sets up ZSH as the default shell (configurable via dotfiles)
+- **python** install python with pip and virtualenv
+- **go** installs go
+- **ruby** installs rbenv, rbenv-update and ruby-build which you can then use
+  to install a ruby of your choice
+- **node** installs node and npm
+- **home** creates a default directory structure in your home directory
+- **shairport** builds shairport for wireless music streaming from your Apple
+  device to your Pi
+- **shairport-sync** builds shairport-sync for even better AirPlay streaming
+- **media-tools** installs useful media players, like mplayer
+- **hifiberry** configures your Pi to work with the HiFiBerry DAC+ card
+
 ## Preparations
 
 There are a few things which you'll need to prepare. Here we go:
