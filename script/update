@@ -2,5 +2,5 @@
 
 cd "$(dirname "$0")/.."
 exec ansible-playbook \
-  -i raspberrypi \
+  -i raspberries \
   site.yml

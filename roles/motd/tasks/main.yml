@@ -14,7 +14,12 @@
   become: yes
   tags: motd
 
+- name: check zsh profile
+  stat: path=/etc/zsh/zprofile
+  register: zprofile
+
 - name: setup dynamic motd script for zsh
+  when: zprofile.stat.exists
   blockinfile:
     dest: /etc/zsh/zprofile
     block: |

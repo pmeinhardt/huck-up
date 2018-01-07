@@ -6,4 +6,5 @@
 
 - name: set zsh as the default shell
   user: name={{ user }} shell=/bin/zsh
+  become: yes
   tags: zsh

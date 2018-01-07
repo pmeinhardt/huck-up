@@ -9,23 +9,23 @@
 # BE SURE NOT TO COMMIT PASSWORDS TO A PUBLIC REPOSITORY!
 #
 # If you changed the hostname of your Raspberry Pi, update the host entry in
-# the 'raspberrypi' group below by providing the Pi's DNS name or IP address.
+# the 'raspberries' group below by providing the Pi's DNS name or IP address.
 # You can also provision multiple hosts simultaneously:
 #
-#   [raspberrypi]
+#   [raspberries]
 #   192.168.1.10
 #   rpi.dns.name
 #
 # If your host runs on a non-standard SSH port you can put the port number
 # after the hostname with a colon. For instance:
 #
-#   [raspberrypi]
+#   [raspberries]
 #   192.168.1.10:2222
 #
 # If you want Ansible to SSH into your host as a different user,
 # e.g. 'mark', you can provide the username as a host variable:
 #
-#   [raspberrypi]
+#   [raspberries]
 #   rpi.dns.name ansible_port=2222 ansible_user=mark
 #
 # or you can specify the username on the command-line:
@@ -41,5 +41,5 @@
 # For an introduction to Ansible inventory files, read:
 # http://docs.ansible.com/ansible/intro_inventory.html
 
-[raspberrypi]
+[raspberries]
 raspberrypi ansible_user=pi # ansible_ssh_pass=raspberry

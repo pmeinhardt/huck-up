@@ -2,13 +2,13 @@
 # Top-level Ansible playbook, maps configuration of the 'raspberrypi' group
 # to the roles (services) that you want the group's host(s) to run.
 
-- hosts: raspberrypi
+- hosts: raspberries
   roles:
     - ssh-keys
     - essentials
     - dotfiles
-    - motd
     - zsh
+    - motd
     - python
     - go
     - ruby

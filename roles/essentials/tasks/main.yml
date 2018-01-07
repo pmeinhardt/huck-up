@@ -13,6 +13,7 @@
     - build-essential
     - curl
     - git
+    - gettext
     - htop
     - iftop
     - iotop
