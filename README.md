@@ -30,7 +30,7 @@ Built using [Ansible](https://github.com/ansible/ansible).
 
 There are a few things which you'll need to prepare. Here we go:
 
-1. **Prepare an SD card** Huck-up automates server management using Ansible.
+1. **💾 Prepare an SD card** Huck-up automates server management using Ansible.
    Its playbooks are written with Raspbian/Debian systems in mind. If you don't
    have a Raspberry Pi operating system on an SD card yet, download
    [Raspbian](https://www.raspberrypi.org/downloads/raspbian/) and
@@ -42,18 +42,18 @@ There are a few things which you'll need to prepare. Here we go:
    empty `ssh` file onto the boot partition to
    [enable SSH](https://www.raspberrypi.org/documentation/remote-access/ssh/).
 
-2. **Get your Pi up.** Push the card into your Pi and power it up.
+2. **🔌 Get your Pi up.** Push the card into your Pi and power it up.
 
-3. **Connect your Pi.** Your Raspberry Pi needs to be connected to your local
-   network. Just hook it up to your router with an ethernet cable if you have
-   one, or else configure
+3. **🔗 Connect your Pi.** Your Raspberry Pi needs to be connected to your
+   local network. Just hook it up to your router with an ethernet cable if you
+   have one, or else configure
    [WiFi](https://www.raspberrypi.org/documentation/configuration/wireless/).
 
-4. **Install Ansible.** On your local machine, install
+4. **⚙ Install Ansible.** On your local machine, install
    [Ansible](http://docs.ansible.com/ansible/intro_installation.html).
    Alternatively you can also run the huck-up playbook directly on your Pi.
 
-5. **Clone this repo…**
+5. **📦 Clone this repo…**
    `git clone https://github.com/pmeinhardt/huck-up.git && cd huck-up`
 
 ## Provisioning
@@ -83,7 +83,7 @@ a private copy that you pass to Ansible via the `-i/--inventory` option.
 You can verify your Pi is reachable by running
 `ansible -i raspberries -k -a "/bin/hostname" raspberries`.
 
-The default password is `raspberry`.
+The default password is `raspberry` (make sure you change it).
 
 **To bootstrap your Pi, run:**
 
