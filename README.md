@@ -21,9 +21,8 @@ Built using [Ansible](https://github.com/ansible/ansible).
   to install a ruby of your choice
 - **node** installs node and npm
 - **home** creates a default directory structure in your home directory
-- **shairport** builds shairport for wireless music streaming from your Apple
-  device to your Pi
-- **shairport-sync** builds shairport-sync for even better AirPlay streaming
+- **shairport-sync** builds shairport-sync for wireless music streaming from
+  your Apple device to your Pi via AirPlay
 - **media-tools** installs useful media players, like mplayer
 - **hifiberry** configures your Pi to work with the HiFiBerry DAC+ card
 
