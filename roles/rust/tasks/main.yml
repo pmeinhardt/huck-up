@@ -1,0 +1,10 @@
+---
+- name: install rust compiler
+  apt: pkg=rustc state=present
+  become: yes
+  tags: rust
+
+- name: install cargo
+  apt: pkg=cargo state=present
+  become: yes
+  tags: rust

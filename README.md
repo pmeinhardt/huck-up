@@ -16,6 +16,7 @@ Built using [Ansible](https://github.com/ansible/ansible).
 - **zsh** sets up ZSH as the default shell (configurable via dotfiles)
 - **python** install python with pip and pipenv
 - **go** installs go
+- **rust** installs rust and cargo
 - **ruby** installs rbenv, rbenv-update and ruby-build which you can then use
   to install a ruby of your choice
 - **node** installs node and npm
