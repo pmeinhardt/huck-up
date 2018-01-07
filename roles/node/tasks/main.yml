@@ -12,8 +12,8 @@
 - name: add nodesource repos
   apt_repository: repo={{ item }} state=present filename="nodesource" mode=0644
   with_items:
-    - "deb https://deb.nodesource.com/node_6.x jessie main"
-    - "deb-src https://deb.nodesource.com/node_6.x jessie main"
+    - "deb https://deb.nodesource.com/node_8.x jessie main"
+    - "deb-src https://deb.nodesource.com/node_8.x jessie main"
   become: yes
   tags: node
 
