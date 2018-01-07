@@ -63,7 +63,7 @@ needs.**
 
 We recommend you keep these versioned in your own fork of this repository.
 
-- Right away, you'll want to edit `site.yml` to your liking
+- Right away, you'll want to edit `base.yml` to your liking
   and select the roles you need.
 
 - Create a file named `vars/private.yml` and hack away. Values in `private.yml`
@@ -78,7 +78,7 @@ We recommend you keep these versioned in your own fork of this repository.
 
 If you have made changes to your Pi already - in particular if it is available
 under a different hostname - update the `raspberries` inventory file or create
-a private copy that you pass to Ansible via the `-i/--inventory-file` option.
+a private copy that you pass to Ansible via the `-i/--inventory` option.
 
 You can verify your Pi is reachable by running
 `ansible -i raspberries -k -a "/bin/hostname" raspberries`.
@@ -89,14 +89,14 @@ The default password is `raspberry`.
 
 ```shell
 ./script/bootstrap # if you have not changed the default username
-ansible-playbook -i raspberries -u USERNAME -k site.yml # otherwise
+ansible-playbook -i raspberries -u USERNAME -k base.yml # otherwise
 ```
 
 or, if running [locally](http://docs.ansible.com/ansible/playbooks_delegation.html#local-playbooks) on your Pi:
 
 ```shell
-# change the "hosts:" entry in site.yml to "hosts: 127.0.0.1", then run:
-ansible-playbook site.yml --connection=local
+# change the "hosts:" entry in base.yml to "hosts: 127.0.0.1", then run:
+ansible-playbook base.yml --connection=local
 ```
 
 This will get everything set up and you're good to go.
@@ -127,7 +127,7 @@ When running a playbook containing Vault-encrypted files append
 `--ask-vault-pass`, i.e. run:
 
 ```
-ansible-playbook -i raspberries site.yml -e "@vars/config.yml" --ask-vault-pass
+ansible-playbook -i raspberries base.yml -e "@vars/config.yml" --ask-vault-pass
 ```
 
 ## Creating backups

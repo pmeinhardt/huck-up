@@ -3,4 +3,4 @@
 cd "$(dirname "$0")/.."
 exec ansible-playbook \
   -i raspberries \
-  site.yml
+  base.yml
