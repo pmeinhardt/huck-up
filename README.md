@@ -14,7 +14,7 @@ Built using [Ansible](https://github.com/ansible/ansible).
 - **dotfiles** sets up the server dotfiles, including git configuration
 - **motd** installs the nice "message of the day" greeting you can see above
 - **zsh** sets up ZSH as the default shell (configurable via dotfiles)
-- **python** install python with pip and virtualenv
+- **python** install python with pip and pipenv
 - **go** installs go
 - **ruby** installs rbenv, rbenv-update and ruby-build which you can then use
   to install a ruby of your choice

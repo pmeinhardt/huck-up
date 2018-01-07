@@ -9,7 +9,7 @@
   become: yes
   tags: python
 
-- name: install virtualenv
-  pip: name=virtualenv state=present
+- name: install pipenv
+  pip: name=pipenv state=present
   become: yes
   tags: python
