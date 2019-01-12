@@ -31,4 +31,5 @@
     - configure shairport-sync
     - build shairport-sync
     - install shairport-sync
+    - enable shairport-sync service
   tags: shairport-sync
