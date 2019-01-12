@@ -9,8 +9,9 @@
   tags: media-tools
 
 - name: install media tools via pip
-  pip: name={{ item }} state=present
-  with_items:
-    - youtube-dl
+  pip:
+    state: present
+    name:
+      - youtube-dl
   become: yes
   tags: media-tools
