@@ -18,6 +18,11 @@
       - htop
       - iftop
       - iotop
+      - locales
       - sudo
       - vim
+  become: yes
+
+- name: ensure locale exists
+  locale_gen: name=en_US.UTF-8 state=present
   become: yes
