@@ -30,7 +30,7 @@
 #
 # or you can specify the username on the command-line:
 #
-#   ansible-playbook -i raspberrypi -u mark site.yml
+#   ansible-playbook --inventory=raspberrypi --user=mark site.yml
 #
 # In order to have Ansible ask for the connection password,
 # add the -k/--ask-pass option to the ansible-playbook call.

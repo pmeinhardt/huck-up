@@ -57,7 +57,7 @@ We recommend you keep these versioned in your own fork of this repository.
 
 If you have made changes to your Pi already - in particular if it is available under a different hostname - update the `raspberries` inventory file or create a private copy that you pass to Ansible via the `-i/--inventory` option.
 
-You can verify your Pi is reachable by running `ansible -i raspberries -k -a "/bin/hostname" raspberries`.
+You can verify your Pi is reachable by running `ansible --inventory=raspberries --ask-pass --args="/bin/hostname" raspberries`.
 
 The default password is `raspberry` (make sure you change it).
 
@@ -65,7 +65,7 @@ The default password is `raspberry` (make sure you change it).
 
 ```shell
 ./script/bootstrap # if you have not changed the default username
-ansible-playbook -i raspberries -u USERNAME -k base.yml # otherwise
+./script/bootstrap --user=USERNAME # otherwise
 ```
 
 or, if running [locally](http://docs.ansible.com/ansible/playbooks_delegation.html#local-playbooks) on your Pi:
@@ -96,7 +96,7 @@ ansible-vault encrypt vars/config.yml
 This will prompt for a password and save the file as encrypted data. When running a playbook containing Vault-encrypted files append `--ask-vault-pass`, i.e. run:
 
 ```
-ansible-playbook -i raspberries base.yml -e "@vars/config.yml" --ask-vault-pass
+ansible-playbook --inventory=raspberries base.yml --extra-vars=@vars/config.yml --ask-vault-pass
 ```
 
 ## Creating backups
