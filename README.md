@@ -57,7 +57,11 @@ We recommend you keep these versioned in your own fork of this repository.
 
 If you have made changes to your Pi already - in particular if it is available under a different hostname - update the `raspberries` inventory file or create a private copy that you pass to Ansible via the `-i/--inventory` option.
 
-You can verify your Pi is reachable by running `ansible --inventory=raspberries --ask-pass --args="/bin/hostname" raspberries`.
+You can verify your Pi is reachable by running:
+
+```shell
+ansible --inventory=raspberries --ask-pass --args="/bin/hostname" raspberries
+```
 
 The default password is `raspberry` (make sure you change it).
 
