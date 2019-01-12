@@ -1,25 +1,26 @@
 ---
 - name: install shairport-sync dependencies
-  apt: pkg={{ item }} state=present
-  with_items:
-    - autoconf
-    - automake
-    - avahi-utils
-    - avahi-daemon
-    - libao-dev
-    - libasound2-dev
-    - libavahi-client-dev
-    - libconfig-dev
-    - libcrypt-openssl-rsa-perl
-    - libdaemon-dev
-    - libio-socket-inet6-perl
-    - libmodule-build-perl
-    - libpopt-dev
-    - libpulse-dev
-    - libssl-dev
-    - libtool
-    - libwww-perl
-    - pulseaudio
+  apt:
+    state: present
+    pkg:
+      - autoconf
+      - automake
+      - avahi-utils
+      - avahi-daemon
+      - libao-dev
+      - libasound2-dev
+      - libavahi-client-dev
+      - libconfig-dev
+      - libcrypt-openssl-rsa-perl
+      - libdaemon-dev
+      - libio-socket-inet6-perl
+      - libmodule-build-perl
+      - libpopt-dev
+      - libpulse-dev
+      - libssl-dev
+      - libtool
+      - libwww-perl
+      - pulseaudio
   become: yes
   tags: shairport-sync
 

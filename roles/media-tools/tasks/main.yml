@@ -1,9 +1,10 @@
 ---
 - name: install media tools via apt
-  apt: pkg={{ item }} state=present
-  with_items:
-    - libav-tools
-    - mplayer
+  apt:
+    state: present
+    pkg:
+      - libav-tools
+      - mplayer
   become: yes
   tags: media-tools
 

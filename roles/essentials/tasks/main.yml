@@ -8,15 +8,16 @@
   become: yes
 
 - name: install essential tools
-  apt: pkg={{ item }} state=present
-  with_items:
-    - build-essential
-    - curl
-    - git
-    - gettext
-    - htop
-    - iftop
-    - iotop
-    - sudo
-    - vim
+  apt:
+    state: present
+    pkg:
+      - build-essential
+      - curl
+      - git
+      - gettext
+      - htop
+      - iftop
+      - iotop
+      - sudo
+      - vim
   become: yes
