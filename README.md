@@ -13,6 +13,7 @@ Built using [Ansible](https://github.com/ansible/ansible).
 - **dotfiles** sets up the server dotfiles, including git configuration
 - **motd** installs the nice "message of the day" greeting you can see above
 - **zsh** sets up Zsh as the default shell (configurable via dotfiles)
+- **mosh** installs the [mobile shell](https://github.com/mobile-shell/mosh) remote terminal application
 - **python** installs [Python](https://www.python.org/) with pip and pipenv
 - **go** installs [Go](https://golang.org/)
 - **rust** installs [Rust](https://www.rust-lang.org/) and [Cargo](https://doc.rust-lang.org/cargo/)

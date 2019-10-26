@@ -8,6 +8,7 @@
     - essentials
     - dotfiles
     - zsh
+    - mosh
     - motd
     - python
     - go

@@ -1,0 +1,5 @@
+---
+- name: install mosh
+  apt: pkg=mosh state=present
+  become: yes
+  tags: mosh
