@@ -1,6 +1,6 @@
 # Huckleberry - Welcome home
 
-My personal Raspberry Pi (home server) management.
+My personal [Raspberry Pi](https://www.raspberrypi.org/) (home server) management.
 
 Built using [Ansible](https://github.com/ansible/ansible).
 
@@ -13,15 +13,15 @@ Built using [Ansible](https://github.com/ansible/ansible).
 - **dotfiles** sets up the server dotfiles, including git configuration
 - **motd** installs the nice "message of the day" greeting you can see above
 - **zsh** sets up Zsh as the default shell (configurable via dotfiles)
-- **python** install python with pip and pipenv
-- **go** installs go
-- **rust** installs rust and cargo
-- **ruby** installs rbenv, rbenv-update and ruby-build which you can then use to install a ruby of your choice
-- **node** installs node and npm
+- **python** installs [Python](https://www.python.org/) with pip and pipenv
+- **go** installs [Go](https://golang.org/)
+- **rust** installs [Rust](https://www.rust-lang.org/) and [Cargo](https://doc.rust-lang.org/cargo/)
+- **ruby** installs [rbenv](https://github.com/rbenv/rbenv), [rbenv-update](https://github.com/rkh/rbenv-update) and [ruby-build](https://github.com/rbenv/ruby-build) which you can then use to install a [Ruby](https://www.ruby-lang.org/) of your choice
+- **node** installs [Node.js](https://nodejs.org/) and [npm](https://github.com/npm/cli)
 - **home** creates a default directory structure in your home directory
-- **shairport-sync** builds shairport-sync for wireless music streaming from your Apple device to your Pi via AirPlay
+- **shairport-sync** builds [Shairport Sync](https://github.com/mikebrady/shairport-sync) for wireless music streaming from your Apple device to your Pi via AirPlay
 - **media-tools** installs useful media players, like mplayer
-- **hifiberry** configures your Pi to work with the HiFiBerry DAC+ card
+- **hifiberry** configures your Pi to work with the [HiFiBerry](https://www.hifiberry.com/) DAC+ card
 
 ## Preparations
 
