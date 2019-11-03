@@ -1,6 +1,15 @@
 version: 2
 jobs:
-  build:
+  shell-check:
+    working_directory: ~/huck-up
+    docker:
+      - image: koalaman/shellcheck-alpine:stable
+    steps:
+      - checkout
+      - run:
+          name: Check Scripts
+          command: shellcheck script/*
+  ansible-lint:
     working_directory: ~/huck-up
     docker:
       - image: circleci/python:3.8
@@ -25,3 +34,9 @@ jobs:
           paths:
             - "/usr/local/bin"
             - "/usr/local/lib/python3.8/site-packages"
+workflows:
+  version: 2
+  checks:
+    jobs:
+      - shell-check
+      - ansible-lint
