@@ -1,0 +1,27 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/huck-up
+    docker:
+      - image: circleci/python:3.8
+    steps:
+      - checkout
+      - run:
+          name: Update permissions (/usr/local/bin)
+          command: sudo chown -R circleci:circleci /usr/local/bin
+      - run:
+          name: Update permissions (/usr/local/lib)
+          command: sudo chown -R circleci:circleci /usr/local/lib/python3.8/site-packages
+      - restore_cache:
+          key: deps-{{ .Branch }}
+      - run:
+          name: Install Ansible Lint
+          command: sudo pip install --quiet ansible-lint
+      - run:
+          name: Run Ansible Lint
+          command: ansible-lint -x 401,701 site.yml
+      - save_cache:
+          key: deps-{{ .Branch }}
+          paths:
+            - "/usr/local/bin"
+            - "/usr/local/lib/python3.8/site-packages"

@@ -1,4 +1,4 @@
-# Huckleberry - Welcome home
+# Huckleberry - Welcome home [![CircleCI](https://circleci.com/gh/pmeinhardt/huck-up.svg?style=svg)](https://circleci.com/gh/pmeinhardt/huck-up)
 
 My personal [Raspberry Pi](https://www.raspberrypi.org/) (home server) management.
 
