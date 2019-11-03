@@ -1,3 +1,5 @@
 ---
 - name: symlink dotfiles
-  shell: ./script/link chdir={{ home }}/.dotfiles
+  command: ./script/link
+  args:
+    chdir: "{{ home }}/.dotfiles"
