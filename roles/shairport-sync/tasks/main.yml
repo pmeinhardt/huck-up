@@ -25,7 +25,7 @@
   tags: shairport-sync
 
 - name: fetch shairport-sync repo
-  git: repo=https://github.com/mikebrady/shairport-sync.git dest={{ home }}/.build/shairport-sync
+  git: repo=https://github.com/mikebrady/shairport-sync.git dest={{ home }}/.build/shairport-sync # noqa 401
   notify:
     - autoreconf shairport-sync
     - configure shairport-sync
