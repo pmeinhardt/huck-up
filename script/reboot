@@ -1,9 +1,14 @@
 #!/usr/bin/env bash
 
+set -o errexit
+set -o pipefail
+set -o nounset
+
 cd "$(dirname "$0")/.."
+
 exec ansible \
   --inventory=raspberries \
   --args="/sbin/reboot" \
   --become \
   raspberries \
-  $@
+  "$@"
