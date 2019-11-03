@@ -1,6 +1,6 @@
 ---
 - name: fetch dotfiles repo
-  git: repo=https://github.com/pmeinhardt/huckleberry.git dest={{ home }}/.dotfiles
+  git: repo=https://github.com/pmeinhardt/huckleberry.git dest={{ home }}/.dotfiles # noqa 401
   tags: dotfiles
 
 - name: write git configuration

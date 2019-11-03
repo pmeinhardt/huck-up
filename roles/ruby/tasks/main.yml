@@ -1,9 +1,9 @@
 ---
 - name: install rbenv
-  git: repo=https://github.com/rbenv/rbenv.git dest={{ home }}/.rbenv
+  git: repo=https://github.com/rbenv/rbenv.git dest={{ home }}/.rbenv # noqa 401
 
 - name: install ruby-build
-  git: repo=https://github.com/rbenv/ruby-build.git dest={{ home }}/.rbenv/plugins/ruby-build
+  git: repo=https://github.com/rbenv/ruby-build.git dest={{ home }}/.rbenv/plugins/ruby-build # noqa 401
 
 - name: install rbenv-update
-  git: repo=https://github.com/rkh/rbenv-update.git dest={{ home }}/.rbenv/plugins/rbenv-update
+  git: repo=https://github.com/rkh/rbenv-update.git dest={{ home }}/.rbenv/plugins/rbenv-update # noqa 401
