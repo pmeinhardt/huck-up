@@ -28,7 +28,7 @@ jobs:
           command: sudo pip install --quiet ansible-lint
       - run:
           name: Run Ansible Lint
-          command: ansible-lint -x 401,701 site.yml
+          command: ansible-lint -x 401,701 base.yml
       - save_cache:
           key: deps-{{ .Branch }}
           paths:
